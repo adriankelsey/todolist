@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  background-color: white;
+}
+
+body {
+  display: flexbox;
+  background-color: white;
+  /*   border-color: blueviolet;ß
+  border-style: dotted; */
+}
+
+/***** Header ******/
+/****         *****/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 28, 28);
+  font-family: "Noto Serif", serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  border-width: 0.1px;
+  font-size: 14px;
+  width: auto;
+}
+
+.title {
+  background-color: rgb(29, 28, 28);
+}
+
+.date {
+  background-color: rgb(29, 28, 28);
+}
+
+/****** Main Container *********/
+/******                *********/
+
+.main-container {
+  display: flexbox;
+  height: 100%;
+  width: 100%;
+}
+
+.todos-container {
+  width: 35%;
+  margin-left: 2em;
+  font-size: 14px;
+  height: 60vh;
+}
+
+.todos {
+  position: relative;
+  font-size: 12px;
+  width: 85%;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 1em;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+  align-self: center;
+  text-decoration: line-through;
+}
+.delete {
+  color: rgb(133, 9, 9);
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  align-self: center;
+}
+
+.delete:hover {
+  color: rgba(133, 9, 9, 0.534);
+}
+
+/*** Submit Form Styling *****/
+/***             *****/
+.form-container {
+  height: 4vh;
+  border-bottom-color: rgb(0, 0, 0);
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: white;
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 1em;
+  margin-right: 1em;
+  align-items: center;
+}
+
+.submit-text {
+  margin-right: 3em;
+  width: 30%;
+  height: 2em;
+  border: 1px solid #333333;
+  outline: none;
+
+  background-color: rgb(238, 238, 238);
+}
+
+.submit-text:focus {
+  box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #333333;
+  padding: 2px 4px 4px 4px;
+  outline: none;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  align-items: center;
+}
+
+.btn:focus {
+  box-shadow: 0 0 2px rgba(81, 203, 238, 1);
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  height: 100%;
+  background-color: rgb(29, 28, 28);
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  /*  border-color: rgb(43, 226, 43);
+  border-style: dotted; */
+  padding: 5vh;
+  position: relative;
+  top: 125px;
+}
+
+.inspirational-quote {
+  background-color: rgb(29, 28, 28);
+  font-size: 2vw;
+}
+
+.inspirational-quote-author {
+  background-color: rgb(29, 28, 28);
+  margin-left: 2em;
+  font-size: 1vw;
+}
+
+/**** Iphone 5 // SE *****/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  body {
+    width: 100%;
+  }
+
+  .header {
+    width: auto;
+  }
+
+  .submit-form {
+    position: relative;
+    bottom: 30px;
+    width: auto;
+  }
+
+  .header {
+    font-size: 3vw;
+  }
+
+  .inspirational-quote {
+    font-size: 10px;
+  }
+
+  .inspirational-quote-author {
+    font-size: 6px;
+    width: auto;
+  }
+
+  .footer {
+    width: auto;
+  }
+}
+/********/

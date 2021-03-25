@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Todo App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Serif&display=swap');
+        </style>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <Header>
+            <div class="header">
+                <h1 class="title">Goals for today </h1>
+                <span class="date">date</span>
+            </div>
+        </Header>
+
+        <!-- Main Container -->
+        <div class="main-container">
+            <div class="todos-container" data-doc="<%= todos.todo%> ">
+                <% if(todos.length > 0){ %>
+                    <% todos.forEach(output => { %> 
+                        <form class="todo-form <%= output.id %>">
+                            <a class="delete" data-doc="<%= output.id %> ">X</a>
+                            <li class="todos"><%= output.todo %></li>
+                            <input type="checkbox" class="checkbox">
+                        </form>
+                    <% }) %> 
+                <% } %> 
+            </div>
+        </div>
+
+        <!-- Post Form -->
+        <div class="form-container">
+
+            <form action="/" class="submit-form" method="POST" name="submit-form" id="submit-form">
+                <input type="text" class="submit-text" id="todo" name="todo" required autocomplete="off">
+                <button action="submit-form" type="button" class="btn" onclick="todo">submit</button>
+            </form>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="inspirational-quote"><%= quoteResult[1].quote;%> </p>
+            <p class="inspirational-quote-author">- <%= quoteResult[1].author%> </p>
+        </footer>
+        
+        <!-- Scripts -->
+        <script src="date.js" async defer></script>
+        <script src="delete.js" async defer></script>
+    </body>
+</html>
